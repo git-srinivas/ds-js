@@ -1,7 +1,4 @@
-<html>
-<head></head>
-<body>
-	<script type="text/javascript">
+
   function List(data){
     this.data = data;
     this.next = null;
@@ -33,6 +30,3 @@
   printAll(head);
   console.log("head1")
     printAll(head1);
-	</script>
-</body>
-</html>
