@@ -1,7 +1,11 @@
 
 "use strict"
 function spiralOrderMatrix(){
-  var a =[[1]];
+  var a =[
+  [1],
+  [2],
+  [3]
+];
   var T=0,L=0,direction = 0;
   var B = a.length-1, R = a[0].length-1;
   var result = [];
