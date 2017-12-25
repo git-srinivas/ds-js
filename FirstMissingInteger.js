@@ -21,21 +21,19 @@
     b.map(function(a,index){
       if(a>0 && b[index+1]){
         if((a+1)== b[index+1]){
-          if(!front){
+          if(!front)
             front = a;
-          }
         }else{
           if(!temp)
             temp=a;
         }
       }
-
     })
     if(front-1>0){
       console.log(front-1)
     }
     else if(temp>0){
-        console.log(temp+1);
+      console.log(temp+1);
     }
     else{
       if(b[b.length-1]>0)
@@ -43,7 +41,6 @@
         else
         console.log(1);
     }
-
   }
 
   FirstMissingInt();
