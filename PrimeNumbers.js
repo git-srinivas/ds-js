@@ -1,4 +1,5 @@
 function PrimeNumbers(A){
+  console.log(new Date().getMilliseconds())
   var factors = [],results=[];
     if(A>1){
       for(var j=2;j<=A;j++){
@@ -14,9 +15,13 @@ function PrimeNumbers(A){
          factors.length=0;
 
       }
-      console.log(results)
+      if(results.length>0){
+        console.log(new Date().getMilliseconds())
+        console.log(results)
+      }
+
       }
       else
       return 0;
 }
-PrimeNumbers(11)
+PrimeNumbers(1000)
