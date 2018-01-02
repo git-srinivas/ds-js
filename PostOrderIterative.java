@@ -28,45 +28,43 @@ public class Main {
     }
 
 public static ArrayList<Integer> postTraversal(TreeNode root) {
-       ArrayList<Integer> result = new ArrayList<Integer>();
-       // Base Case
-       if (root == null) {
-           return result;
-       }
+  ArrayList<Integer> result = new ArrayList<Integer>();
+// Base Case
+if (root == null) {
+  return result;
+}
 
-       // Create an empty stack and push root to it
-       Stack<TreeNode> nodeStack = new Stack<TreeNode>();
-       nodeStack.push(root);
+// Create an empty stack and push root to it
+Stack<TreeNode> nodeStack = new Stack<TreeNode>();
+nodeStack.push(root);
 
-       /* Pop all items one by one. Do following for every popped item
-        a) print it
-        b) push its right child
-        c) push its left child
-        Note that right child is pushed first so that left is processed first */
-       while (nodeStack.empty() == false) {
+/* Pop all items one by one. Do following for every popped item
+a) print it
+b) push its right child
+c) push its left child
+Note that right child is pushed first so that left is processed first */
+while (nodeStack.empty() == false) {
 
-           // Pop the top item from stack and print it
-           TreeNode mynode = nodeStack.peek();
+  // Pop the top item from stack and print it
+  TreeNode mynode = nodeStack.peek();
 
-           nodeStack.pop();
+  nodeStack.pop();
 
-           // Push right and left children of the popped node to stack
-           if(mynode.right == null && mynode.left == null){
-               result.add(mynode.val);
-           }
-           if (mynode.left != null) {
-               nodeStack.push(mynode.left);
-           }
-           if(mynode.right != null || mynode.left != null){
-               nodeStack.push(new TreeNode(mynode.val));
-           }
-           if (mynode.right != null) {
-               nodeStack.push(mynode.right);
-           }
+  // Push right and left children of the popped node to stac
+     if(mynode.right == null && mynode.left == null){
+      result.add(mynode.val);
+  }
+  if(mynode.right != null || mynode.left != null){
+      nodeStack.push(new TreeNode(mynode.val));
+  }
+  if (mynode.right != null) {
+      nodeStack.push(mynode.right);
+  }
+  if (mynode.left != null) {
+      nodeStack.push(mynode.left);
+  }
+}
 
-
-       }
-
-       return result;
+return result;
    }
  }
