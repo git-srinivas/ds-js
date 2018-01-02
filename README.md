@@ -1,2 +1,2 @@
 # ds-js
-# javascript practice programs
+# algorithms datastructures and dynamic programming
