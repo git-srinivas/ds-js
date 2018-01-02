@@ -17,7 +17,7 @@ function SortedPermutation(str){
    // A utility function to find factorial of n
    function fact(n)
    {
-       return (n <= 1)? 1 :(n * fact(n-1))%1000003;
+       return (n <= 1)? 1 :(n * fact(n-1));
    }
 
    for (var i = 0; i < len; ++i)
@@ -32,4 +32,4 @@ function SortedPermutation(str){
 
    return rank;
 }
-console.log(SortedPermutation("UJSQEGYMRLOCWDFVXHZT"));
+console.log(SortedPermutation("STRING"));
