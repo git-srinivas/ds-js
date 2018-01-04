@@ -23,6 +23,4 @@ static int height(Node root) {
           height++;
       }
       return height;
-
-
-  }
+    }
