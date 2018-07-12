@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php">
+  <input type="file" name="pic" accept=".xlsx,.xls" id="upload">
+  <input type="submit">
+</form>
+
+<p><strong>Note:</strong> The accept attribute of the input tag is not supported in Internet Explorer 9 (and earlier versions), and Safari 5 (and earlier).</p>
+<p><strong>Note:</strong> Because of security issues, this example will not allow you to upload files.</p>
+<script>
+var file = document.getElementById("upload");
+
+file.addEventListener("change", function() {
+    for (var i = 0; i < file.files.length; i++) {
+        console.log(file.files[i].type);
+    }
+}, false);
+</script>
+</body>
+</html>
+
+https://stackoverflow.com/questions/11832930/html-input-file-accept-attribute-file-type-csv/11834872#11834872
+https://www.solvusoft.com/en/mime-multipurpose-internet-mail-extensions/application/application-vnd-ms-excel/
+https://stackoverflow.com/questions/17293861/how-to-make-input-type-file-accept-only-these-types
+https://www.google.co.in/search?q=empty+mime+type+for+xlsx+files&rlz=1C5CHFA_enMY795MY795&oq=empty+mime+type+for+xlsx+files&aqs=chrome..69i57.38191j1j7&sourceid=chrome&ie=UTF-8
+https://groups.google.com/a/chromium.org/forum/#!topic/chromium-discuss/45zsF7K7NNY
+https://bugs.chromium.org/p/chromium/issues/detail?id=737127&can=1&q=mime%20empty&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified
+https://github.com/w3c/FileAPI/issues/51
